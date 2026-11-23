@@ -1,0 +1,32 @@
+These are the results of the Smart Pointers Lab from Group X
+
+=== Part 1: std::unique_ptr ===
+[+] Acquired Resource: DatabaseConnection
+[*] Using Resource: DatabaseConnection
+[i] res1 is now nullptr after move.
+[*] Using Resource: DatabaseConnection
+[+] Acquired Resource: Socket_A
+[+] Acquired Resource: Socket_B
+[*] Using Resource: Socket_A
+[*] Using Resource: Socket_B
+[*] Using Resource: DatabaseConnection
+[-] Released Resource: Socket_A
+[-] Released Resource: Socket_B
+[-] Released Resource: DatabaseConnection
+
+=== Part 2: std::shared_ptr ===
+[+] Acquired Resource: ConfigFile
+[i] Initial use_count: 1
+[i] Inner scope use_count: 3
+[i] Outer scope use_count: 1
+[-] Released Resource: ConfigFile
+
+=== Part 3: std::weak_ptr ===
+[+] Node created: Node_A
+[+] Node created: Node_B
+[*] Node_A pinged Node_B
+[-] Node destroyed: Node_B
+[!] Node_A: Partner no longer exists
+[-] Node destroyed: Node_A
+
+=== End of main() ===
